@@ -1,0 +1,1076 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_UserInput_Final" Type="InArgument(scg:Dictionary(x:String, x:String))" />
+    <x:Property Name="Inconfig" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1100,8402.4</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>System.Globalization</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Make_My_trip" sap:VirtualizedContainerService.HintSize="1110.4,8337.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="input_Starting" />
+      <Variable x:TypeArguments="x:String" Name="input_Destination" />
+      <Variable x:TypeArguments="x:String" Name="input_Date" />
+      <Variable x:TypeArguments="x:String" Name="Traveling" />
+      <Variable x:TypeArguments="s:DateTime" Name="NewDate" />
+      <Variable x:TypeArguments="x:String" Default="*" Name="FormattedDate" />
+      <Variable x:TypeArguments="s:DateTime" Name="currentDate" />
+      <Variable x:TypeArguments="x:Boolean" Name="compareDate" />
+      <Variable x:TypeArguments="x:String" Name="DateText" />
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+      <Variable x:TypeArguments="x:String" Name="ExcellPath" />
+      <Variable x:TypeArguments="x:String" Name="Folderpath" />
+      <Variable x:TypeArguments="x:Boolean" Name="AddPop" />
+      <Variable x:TypeArguments="s:DateTime" Name="dateTextNew" />
+      <Variable x:TypeArguments="x:String" Name="Emailid" />
+      <Variable x:TypeArguments="ss:SecureString" Name="password" />
+      <Variable x:TypeArguments="x:String" Default="[Inconfig(&quot;AssetCredPath&quot;).ToString]" Name="AssetPath" />
+      <Variable x:TypeArguments="x:String" Default="[Inconfig(&quot;CredName&quot;).ToString]" Name="AssetName" />
+      <Variable x:TypeArguments="x:String" Name="input_Name" />
+      <Variable x:TypeArguments="x:String" Name="input_Email" />
+      <Variable x:TypeArguments="x:String" Default="[Inconfig(&quot;EmailSubject&quot;).ToString]" Name="EmailSubject" />
+      <Variable x:TypeArguments="x:String" Default="[Inconfig(&quot;EmailBody&quot;).ToString]" Name="EmailBody" />
+      <Variable x:TypeArguments="x:String" Default="[Inconfig(&quot;SenderName&quot;).ToString]" Name="SenderName" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[AssetName]" CacheStrategy="None" DisplayName="Get Credential" FolderPath="[AssetPath]" sap:VirtualizedContainerService.HintSize="1048,52.8" sap2010:WorkflowViewState.IdRef="GetRobotCredential_4" Password="[password]" Username="[Emailid]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:GetRobotCredential>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1048,52.8" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[AssetName+ &quot; MakeMY&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <ui:MultipleAssign sap2010:Annotation.AnnotationText="In_userInput_Final Dictionary assigned to string varibales" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1048,96.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[input_Starting]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_UserInput_Final("From")]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[input_Destination]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_UserInput_Final("Destination")]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[input_Date]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_UserInput_Final("Date")]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[Traveling]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_UserInput_Final("WayOf")]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[input_Name]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_UserInput_Final("Name")]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[input_Email]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_UserInput_Final("Email")]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MultipleAssign>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName=" Browser" sap:VirtualizedContainerService.HintSize="1048,7568.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="4c8a11b4-dfcc-491f-9e0e-84c6e9661909" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1014.4,7352" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Check App State 'make wy trip'" sap:VirtualizedContainerService.HintSize="952,479.2" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="4c8a11b4-dfcc-491f-9e0e-84c6e9661909" Timeout="30" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,260.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:UiElementExists DisplayName="Add Popup exist" Exists="[AddPop]" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d836e3ca-83f4-4c30-b2d0-f1461b616e60" InformativeScreenshot="3a545d691d64876dc713f6feea3d27ed" Selector="&lt;webctrl tag='SECTION' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:UiElementExists.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:UiElementExists>
+                  <If Condition="[AddPop=True]" DisplayName="If Addpop Exist" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="If_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </If>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,83.2" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Throw Exception="[new System.Exception(&quot;Site is not visible now ! please  try again after sometime&quot;)]" sap:VirtualizedContainerService.HintSize="387.2,90.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.makemytrip.com/" CvTextArgument="make wy trip" CvType="Text" DesignTimeRectangle="206, 177, 143, 32" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'make wy trip'" Guid="77b73ee9-e90b-4e87-ae3e-718061a371f0" InformativeScreenshot="608c73c83b3ddc3c18757a10ba383a0a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights &amp;amp; Holiday' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="952,52.8" sap2010:WorkflowViewState.IdRef="Delay_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Delay>
+            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[Traveling]" sap:VirtualizedContainerService.HintSize="952,52.8" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+              <Switch.Default>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Please one of this&quot;]" />
+              </Switch.Default>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick x:Key="Flight" ActivateBefore="True" ClickType="Single" DisplayName="Flight" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c8a11b4-dfcc-491f-9e0e-84c6e9661909" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.makemytrip.com/" CvTextArgument="Flights" CvType="Text" DesignTimeRectangle="438, 329, 73, 38" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Flights'" FullSelectorArgument="&lt;webctrl aaname=' Flights ' parentid='SW' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Flights ' parentid='SW' tag='SPAN' type='' class='chNavText darkGreyText' check:innerText='Flights' /&gt;" Guid="75dde517-715c-4dde-9cd6-b9a99a5b2e52" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE0AAAAqCAYAAAD2+NZSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALqSURBVGhD7ZcxixNREMfvY6S9MqVl2pQpU9pemdKvsGUQxRNRgogSROSwMSCKhShBLA5EjChyiM0qFkEQVg5k/M/bmXXJZeO+ScxGmB887jKZfdn88mbe2z1yonFpBlyaAZdmwKUZcGkGXJoBl2bApRlwaQZcmgGXZsClGbBJ+0LUH+LiFWPKea/l9Q2iNFxINHtCtI/YwTMJ1CSRecf47KZZW9r+ZaLu1bPjmPOWSBtePBurQ4y00bX4+WNYW1oCMZU0sdJ+El1Y+MxNs3VpVmpL+4SVvqHPrGLr0qb381j/qQSYb0SHt4naWroLg/tjIe0Dxt18te4h//wDovmvfJrJneVzqOjZc6xwtJMQR97gIe7rNH8vhual/cAcV/JY61LeD4MQGa3rRCdIU2ktloLRxTUtifUe5VNN7iGOOcK1nCP9dYIfJUU70PwOYh2R20e7iOWfbAR8k4Ea0uYvJAerJMtDRG+Jzi3EVFq3tLKyVyIC9xA2HpBi3sXPZI5GeXzwUgIgff9nrhjWlrZsFH2nhjT+4iFnmTR8Ub1uaU8r3Uc44oC/SeujJOeGkizTfHlit6sqzwFWobKutAz30pFcLt0eeujks7wZyU5sBBnKpIdY6Ff424bEodabsK60wFdcj/Luad/DWHn/FTQvDT0lYVk4kHLDr2Ij0kqcPJa8WyhXidWleWnfUYYyl5Ynj4MxBL2RHFBXWrGxyK6bofyZ7B2eFEqrN8OGEPKw48ayEystxLDa9EhQHtrX6koj9CkudY7p8WSCvETOZ+GHKR1XEmw6sTQu7Rg9hl+PcJIvwO420/JBPlNbGuBr9ZDbuYn3+AiEflY+QLfRDkYGYYxN2gYZQyh/icOPEhBmOBpwvAcBu0bj0rgha6nwrsn9TE/rLfw/xRPDrtG4NCZFgx6gcev5jJ8yrM+F22AnpP1vuDQDLs2ASzPg0gy4NAMuzYBLM1BI40Olj9VDcWkRQ3FpEUPxnhYN0W/WNm291+eMFwAAAABJRU5ErkJggg==" InformativeScreenshot="222d3c987d136abdd49f78912d96dc6e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights &amp;amp; Holiday' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick x:Key="Train" ActivateBefore="True" ClickType="Single" DisplayName="Train" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c8a11b4-dfcc-491f-9e0e-84c6e9661909" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.makemytrip.com/" CvTextArgument="Trains" CvType="Text" DesignTimeRectangle="961, 329, 66, 38" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Trains'" FullSelectorArgument="&lt;webctrl aaname=' Trains ' parentid='SW' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Trains ' parentid='SW' tag='SPAN' type='' class='chNavText darkGreyText' check:innerText='Trains' /&gt;" Guid="807d586e-9a76-426d-8ed2-954d5e27b428" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAAqCAYAAAAOGC2lAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFlSURBVGhD7ZftDYMgFEU7n+OwSx2k7mEYgy2owkMpeFMVkaa5J+FHHx+F4+MZH5ZsQjEAigFQDIBiABQDoBgAxQAoBkAxAIoBUAyAYgAUAzgsxryU7brue3tqmXEGYwc1r6PsYCR0M+UZYwarJhHqdeUJtO1FcD9K6GZ+VEx7KAZQT8zYT1ehny5FqBefNSOrVUlN0s85Ps8XlvVCX2jRGMd6DX07V6cqi/GbS/vCwZb6EcZGcrbFJOvJf3dqmPTPBCnrPPcAlv79VBeTxQGpCCQmLcY+8yQrZC9XFOzqYvZu0h/wuBgfD9flurdZOzHhGny0UjEePzdf8wgNxETFOKop12RMSl5z9nK/GBmfxuuIydfdS4OMkacYvSnW1C8Uk0qX32c+T9rUGOkLzY1xsTIxZtRWuwxZ1z77zVYu5k+hGADFACgGQDEAigFQDIBiABQDoBgAxQAoBkAxAIoBUMwm1r4BpKiC5MS8Kk0AAAAASUVORK5CYII=" InformativeScreenshot="8aeaf78a3d0e5189aa8641d9df6558ac.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights &amp;amp; Holiday' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick x:Key="Bus" ActivateBefore="True" ClickType="Single" DisplayName="Bus" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c8a11b4-dfcc-491f-9e0e-84c6e9661909" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.makemytrip.com/" CvTextArgument="Buses" CvType="Text" DesignTimeRectangle="1068, 329, 65, 38" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Buses'" FullSelectorArgument="&lt;webctrl aaname=' Buses ' parentid='SW' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Buses ' parentid='SW' tag='SPAN' type='' class='chNavText darkGreyText' check:innerText='Buses' /&gt;" Guid="ffcfcccc-7ea2-4d46-8d21-f8f3285b0dbc" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEUAAAAqCAYAAADlL5amAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGTSURBVGhD7ZaNrYMgFIXffI7DLnWQuodxDLegAvcqP0efIkljc76EpAUE/IDT/llSQCkASgFQCoBSAJQCoBQApQAoBUApAEoBUAqAUgCUAqiSMr0623W49KN0ejA3pBg7zFLhme1gghjzThoeR0MpDhXT20lqnkhjKdpGKRFyUsywfIq+v3JFk+1dBsX182BNlE2l2O16asnza36bpL2c9xxNpYT6eLEnpaiQVaaMddBux97PpfmlQrY8C3PUBP8NKaDEi/aclOJfEF9Hh5+vGFtESP1enxraXh/ZvW1xF08KFCN9d0u4ZuvVaSCmedCqmHBsL2SK9tWXXV8O9d0hy6XavwbtpcjCwoKuSIlIMmRvjGPKjDlPcym6mOSkFEf6/92PM+JwE3YJc3xdCrrXxY7FR1yl5EGb/bKsEuM+yWlKJTrqRAZuSMEF7UzaPwSjrxMp0zgVY5bjZJnjint+dhdseX4ZI4jTUifEUSXl16EUAKUAKAVAKQBKAVAKgFIAlAKgFAClACgFQCkASgFQSoG1H9HDuma3li4AAAAAAElFTkSuQmCC" InformativeScreenshot="0f5daf3a843d43996a8b2dbe682f74b2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights &amp;amp; Holiday' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NClick x:Key="Cab" ActivateBefore="True" ClickType="Single" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c8a11b4-dfcc-491f-9e0e-84c6e9661909" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.makemytrip.com/" CvTextArgument="Cabs" CvType="Text" DesignTimeRectangle="1173, 329, 58, 38" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Cabs'" FullSelectorArgument="&lt;webctrl aaname=' Cabs ' parentid='SW' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Cabs ' parentid='SW' tag='SPAN' type='' class='chNavText darkGreyText' check:innerText='Cabs' /&gt;" Guid="921ddfb9-b662-4b45-b9c1-57f0eee961ef" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD4AAAAqCAYAAADrhujJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFeSURBVGhD7ZYBDoMgDAD3Pp/DX+ZD5j+Mz+AX3YBWa2UboHMx7SUk04H0aEFvoBQT14aJa8PEtWHi2jBxbZi4Nky8Ff9w0HWdaA4Gjx0Kme5hXA8TXv+aHeIT9CR65+Eu992j3P4i4iR3XKCXEKfy7ke8cQAXEMdsuwFqtvHmLFhtDy7uYXCsn5zHD+D4cxoXq16cJhaBfyJJsQoZ+xQ0ewb1WR2Msh/NzRYjjquIhThFPIcsbXlNpErBxYgLUf/GyPE38ST0XZyyHqtlLvP98qft8SVo3grEcdxykH45AwppEKcgS091FiirkqaMS2gxG+SbxOes5wJF/BjO5/BDZixRKv52QZD4/3niL1jprr7QeEnHDG+3BlXMVjzfb36+PNywGmq+EIl2cWSRYE1mAAOkFrMf7wnxMC7XF5leVSTna5EO7Ba/KiauDRPXholrw8S1YeLaMHFtmLguAJ56xWuR/XCtKgAAAABJRU5ErkJggg==" InformativeScreenshot="6426c86c52d28e4d873aa6ed8da68292.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights &amp;amp; Holiday' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+            </Switch>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="30" DisplayName="Click 'One Way'" sap:VirtualizedContainerService.HintSize="952,52.8" sap2010:WorkflowViewState.IdRef="NClick_25" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c8a11b4-dfcc-491f-9e0e-84c6e9661909" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.makemytrip.com/flights/" CvTextArgument="One Way" CvType="Text" DesignTimeRectangle="246, 345, 107, 26" DesignTimeScaleFactor="1.25" ElementType="ListItem" FriendlyName="'One Way'" FullSelectorArgument="&lt;webctrl parentid='root' tag='LI' aaname='One Way' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='root' tag='LI' type='' class='' aaname='One Way' check:innerText='One Way' /&gt;" Guid="486e4112-eed1-48f2-a194-17cabc46f479" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG8AAAAeCAYAAAAiu0AEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALXSURBVGhD7Zm7juowEIbP8/E4eRfS0PEEaFPAU6zoEBUtBT2i8slvexJfxsk4y82Sv5WFPL7G/8w4sP9UpViqeAVTxSuYKl7BVPEKpopXMFW8gqniFcxi8c7ns9rv92q73arNZqM/UYe98h6yxbvdbmq326nD4aAul4u63+/ajk/UYUc7+uVyXK/UahWU9dG2vpqr6hqs2ajuak0BZn+p9vnxzyZLPAiCCDudTtbCg3b0Ewv42w5itb/WBlL2V2HXa3640z+q1u5lsv1tzpYpHiJqTjgC/dB/lmunGjx00/W+y/FGj57ai+NIU+28sK9BLB7uMqTEHNB/7g6cTkWE9eqkwM+CHKXtV/TR++zXP/407H5lz/FcxOLhZQR3Wg7oj3Fp5KnGPxxzyNrLKVps4TzfjJ3uQ1y1OGGaNvt01/PniJ2L5hnK8IxTjmidR+ikYvFwh9HLiRT0x7gkGanGP1SKEJQxSkik8eDtQbmRRGKnHIZr1/v0Hcc74EDQaB+UcmlOW4/u8ZQ9gVg8fB1YwuS4v4oXeagfyWZMnALNuoxdQ44ROEUUVWOKDOscRlCak4++cJ05siLv8XjYmoyXR170oNauxSMRUiV92P5a5qC9PXqRltqLT+hIkeB2TmnUgc/eeXMpzMF47kTq0jDiZXjygCuOdrBQaGfuIGUO0LN5xY12YZaYQCzed71tSsSzcy8Rz1mvS8xBkdOu3SgFdg+OMIATZ0ylTHQLEIsHvud7nkw8c2B5qYggp2r6+dhD9SLLEcXawzXZyKKobZg2AVnifc8vLDLxhro33kbV3GENa6eywji3G2Fu1NIw4wgo8ZpDmzeHjCzxAARBRCEl4k77zG+bUvEM0bx6XP/HikLEIoQkI9txuqFd2xiH0fa5a4MnWzwCdxleRhBh9b8KS+GdTcpi8SpPIHE/SqnifYz5tDxHFa9gqngFU8UrmCpewVTxikWp/8dRkDypdFTIAAAAAElFTkSuQmCC" InformativeScreenshot="823c6b85b4db4c2495e428aa60bf7ee6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Flight Booking, Cheap Flights , Air Ticket Booking at Lowest Airfare | MakeMyTrip' /&gt;" SearchSteps="Selector, FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CvTextArgument="Round Trip" CvType="Text" DesignTimeRectangle="378, 345, 123, 26" ElementType="ListItem" FriendlyName="'Round Trip'" FullSelectorArgument="&lt;webctrl class='selected' parentid='root' tag='LI' /&gt;" FuzzySelectorArgument="&lt;webctrl class='selected' parentid='root' tag='LI' type='' aaname='Round Trip' check:innerText='Round Trip' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <Sequence DisplayName="Starting Point of Journey" sap:VirtualizedContainerService.HintSize="952,83.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:Boolean" Name="FromExist" />
+                <Variable x:TypeArguments="x:Boolean" Name="FromTypeInto" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:UiElementExists DisplayName="From Exists " Exists="[FromExist]" sap:VirtualizedContainerService.HintSize="411.2,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                <ui:UiElementExists.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3900ad69-2535-4a9a-bd7d-31ad5d6aa96b" InformativeScreenshot="2919aad818f6fed49dcf7322c15b648d" Selector="&lt;webctrl aaname='From' parentid='root' tag='SPAN' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:UiElementExists.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:UiElementExists>
+              <If Condition="[FromExist=True]" DisplayName="After From Exist (If cond)" sap:VirtualizedContainerService.HintSize="411.2,610.4" sap2010:WorkflowViewState.IdRef="If_3">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="376.8,247.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'From'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c8a11b4-dfcc-491f-9e0e-84c6e9661909" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.makemytrip.com/flights/" CvTextArgument="From" CvType="Text" DesignTimeRectangle="258, 398, 327, 21" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'From'" FullSelectorArgument="&lt;webctrl aaname='From' parentid='root' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='From' parentid='root' tag='SPAN' type='' class='lbl_input appendBottom10' check:innerText='From' /&gt;" Guid="5fdeb18e-1f09-4d5b-b05f-8072bf047dff" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAUsAAAAZCAYAAAC4hgzWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGWSURBVHhe7drRkYIwGEXhrY9y0osUIn04lkERYBZD/gWyVw2IuwOcb+a+YJC3M4765QEALxFLAMhALAEgA7EEgAzEEgAyEEsAyDCNZV15VxS+eDRX+ToeBYAjuN1uYTqWp2u8AADHZJEklgAgpJG0EUsA6KhAjrcglrWvXOHdufb+Ug7fZ47vGV8PK/3kHcNznK+6t7iehnPlpX95fO3XvQCwIhVGtcWxfBSy+uzCayGm/ZV4vo9jfyk+p5sFsr/PeXc/a8+3c/ywBGBlKojPpmMpZ2G0+IlPfPH+IZQm3mPRk+eSM5FF9Ce0APAmFcNXW/7JUnzaexa2yWvEEsA/UBHMHbEEcAgqgHNGLAHsnorf3K0aSx3Bu+QeYgngj6jwLdm6sezY336GEMbz3TX75ZtYAvg0Fbwla9s2bPVYBln/sySWAD5DRW/uLJI6lgCwcSp8c5ZG0kYsAeyGit+cqUjaiCWAXVDxy52KYzpiCWDzVABzp8KoRiwBbJ6KYM5UFNM1TRNGLAFsmopgzlQY01kom6bx387Nt+A+GhhnAAAAAElFTkSuQmCC" InformativeScreenshot="b54711f00940aa9f0090d67313f5006c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Flight Booking, Cheap Flights , Air Ticket Booking at Lowest Airfare | MakeMyTrip' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap:VirtualizedContainerService.HintSize="377.6,180" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Throw Exception="[new System.Exception(&quot;they chechi pinnem&quot;)]" sap:VirtualizedContainerService.HintSize="334.4,90.4" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                  </Sequence>
+                </If.Else>
+              </If>
+              <ui:UiElementExists DisplayName="Input TypeInto  Exists " Exists="[FromTypeInto]" sap:VirtualizedContainerService.HintSize="411.2,52.8" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                <ui:UiElementExists.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="05a3f886-a7ac-4e64-b0b5-eeb27de5a2db" InformativeScreenshot="c1fc27f6a2d239a0f03125b060735263" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;input' tag='INPUT' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:UiElementExists.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:UiElementExists>
+              <If Condition="[FromTypeInto=True]" DisplayName="After From TypeInto Exist (If cond)" sap:VirtualizedContainerService.HintSize="411.2,52.8" sap2010:WorkflowViewState.IdRef="If_4">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="300,142.4" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT of From'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="256.8,52.8" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="4c8a11b4-dfcc-491f-9e0e-84c6e9661909" Text="[input_Starting]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.makemytrip.com/" CvTextArgument="From" CvType="Text" DesignTimeRectangle="235, 486, 395, 52" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' class='fsw_inputField lineHeight36 latoBlack font30' id='fromCity' parentid='root' /&gt;" FuzzySelectorArgument="&lt;webctrl type='text' tag='INPUT' class='react-autosuggest__input react-autosuggest__input--open react-autosuggest__input--focused' aaname='' /&gt;" Guid="ebbd43cf-9bc4-4209-a9c0-328e26cb785b" ImageBase64="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" InformativeScreenshot="0bd360525e106804833d63d64561ffee.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights &amp;amp; Holiday' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArgument="From" CvType="Text" DesignTimeRectangle="258, 454, 327, 21" ElementType="Text" FriendlyName="'From'" FullSelectorArgument="&lt;webctrl aaname='From' parentid='root' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='From' parentid='root' tag='SPAN' type='' class='lbl_input appendBottom10' check:innerText='From' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAUsAAAAZCAYAAAC4hgzWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGISURBVHhe7drLTcNQEEBR+qMiemCP6IAKkKiBLQWw47PkswuYZyuDHDMOz8YBJZzFUaLnGXl3Zck+enxtGgC2E0uACmIJUEEsASqIJUAFsQSoIJYAFTZjeds0x6flcMx509z05wEO3MPLeyeP5UXvDOAfikiKJUBiGMkglgBFFsi+WbE8Oy9zV+X/dZlt54c7/fO1y95+3Oes/F6WvZg5KXvt9f7Zl12ABWVhzMyO5VjIbkpE2/MupuuzmG/j2J3FfYoI5OdeOxv3jzkvloCFZUHcJo/liAhjxO/LE996vx/K0O1E9EbmNmbWIqKfoQX4oSyG35n/ZDmIWmtb2DauiSXwB7II1hJL4F/IAjiFWAIHL4vfVIvGciyCrY0dsQR+SRa+OZaNZRGf/fRD2M2Xs3jzLZbArmXBm+P++a2zeCw7ld9ZiiWwC1n0popI5rEE2HNZ+KYYRjKIJXAwsvhNkUUyiCVwELL41criOCSWwN7LAlgrC2NGLIG9l0WwRhbFobunVbFqPgArEDeO0xGbpQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_18" />
+                </If.Else>
+              </If>
+              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="411.2,52.8" sap2010:WorkflowViewState.IdRef="SendHotkey_6" Key="down" KeyModifiers="None" SpecialKey="True">
+                <ui:SendHotkey.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="f61a5af7-12c7-495a-b7d3-ee36352f279c">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:SendHotkey.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:SendHotkey>
+              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="411.2,52.8" sap2010:WorkflowViewState.IdRef="SendHotkey_7" Key="enter" KeyModifiers="None" SpecialKey="True">
+                <ui:SendHotkey.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="d56bc3ac-65c9-4b76-bf7d-27084d293641">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:SendHotkey.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:SendHotkey>
+            </Sequence>
+            <Sequence DisplayName="Destination" sap:VirtualizedContainerService.HintSize="952,83.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:Boolean" Name="ToExist" />
+                <Variable x:TypeArguments="x:Boolean" Name="Totypeinto" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:UiElementExists DisplayName="To Element Exists " Exists="[ToExist]" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
+                <ui:UiElementExists.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a8306dff-37f2-4a15-85c3-dcf324a8846c" InformativeScreenshot="4b7ebeb61b99c7f86e19210beb8b43d4" Selector="&lt;webctrl aaname='To' parentid='root' tag='SPAN' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:UiElementExists.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:UiElementExists>
+              <If Condition="[ToExist=True]" DisplayName="After To Element exist (If Cond)" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="If_5">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="376.8,247.2" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Destination'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c8a11b4-dfcc-491f-9e0e-84c6e9661909" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.makemytrip.com/flights/" DesignTimeRectangle="658, 454, 301, 21" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'To'" FullSelectorArgument="&lt;webctrl aaname='To' parentid='root' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='To' parentid='root' tag='SPAN' type='' class='lbl_input appendBottom10' check:innerText='To' /&gt;" Guid="9eba03f8-d7cd-4cff-9cae-e01146ab78c5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAATEAAAAZCAYAAABZ7RmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADfSURBVHhe7drhacMwFIXRzudxtEs8SLxHyBje4tVtnARKnaBCnVw4BwxGxn8/HpI+CiCYiAHRRAyIJmJANBEDookYEE3EgGi3iM3HVsMwPH8O5/UPgNfbnsTmqdoSrXac1wWA9yNiQDQRA6L9LWKn8cde2Vh2yoBX6I7Y9QDgvj7X1L5C1moytAE764vY5nS2hqxNyxvAfroidpnCfp+4Hn0D+C8iBkQTMSCaPTEgWl/EFufD5VrFff16OjnUeFqXAHbSHbFv7okBb2I7YgABRAyIJmJANBEDookYEKzqE0mTM1OSmFAMAAAAAElFTkSuQmCC" InformativeScreenshot="dc5cb057254cbe4742697df282880563.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Flight Booking, Cheap Flights , Air Ticket Booking at Lowest Airfare | MakeMyTrip' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NClick>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_20" />
+                </If.Else>
+              </If>
+              <ui:UiElementExists DisplayName="To Typeinto Exists '" Exists="[Totypeinto]" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
+                <ui:UiElementExists.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ab659ca9-89e4-433f-b9bb-c6113e25b03c" InformativeScreenshot="e8e4f5919a4e6254cfdd83d16c187fad" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;input' tag='INPUT' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:UiElementExists.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:UiElementExists>
+              <If Condition="[Totypeinto=True]" DisplayName="After To TypeInto Exist (If cond)" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="If_6">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="300,142.4" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type  Destination" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="256.8,52.8" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="4c8a11b4-dfcc-491f-9e0e-84c6e9661909" Text="[input_Destination]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.makemytrip.com/flights/" CvTextArgument="To" CvType="Text" DesignTimeRectangle="609, 486, 395, 52" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' parentclass='react-autosuggest__container react-autosuggest__container--open' parentid='root' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl type='text' tag='INPUT' class='react-autosuggest__input react-autosuggest__input--open react-autosuggest__input--focused' aaname='' /&gt;" Guid="82bb304d-ad84-4300-ba67-691d977b6e44" ImageBase64="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" InformativeScreenshot="f6389cfb8e00228e998ce7b32e459dc4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Flight Booking, Cheap Flights , Air Ticket Booking at Lowest Airfare | MakeMyTrip' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive" />
+                      </uix:NTypeInto.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NTypeInto>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_22" />
+                </If.Else>
+              </If>
+              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="387.2,136.8" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="down" KeyModifiers="None" SpecialKey="True">
+                <ui:SendHotkey.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="287202ad-16c2-40bc-b3fd-ddff38a9d148">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:SendHotkey.Target>
+              </ui:SendHotkey>
+              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="387.2,133.6" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="enter" KeyModifiers="None" SpecialKey="True">
+                <ui:SendHotkey.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="f8971aee-c1af-45ca-b8f1-85edf7626b07">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:SendHotkey.Target>
+              </ui:SendHotkey>
+            </Sequence>
+            <Sequence DisplayName="Date" sap:VirtualizedContainerService.HintSize="952,4528.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:Boolean" Name="DepartureExist" />
+                <Variable x:TypeArguments="x:Boolean" Name="DateTextEXist" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign DisplayName="Convert string to date time" sap:VirtualizedContainerService.HintSize="540.8,82.4" sap2010:WorkflowViewState.IdRef="Assign_11">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="s:DateTime">[NewDate]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="s:DateTime">[DateTime.ParseExact(input_Date,"d/M/yyyy",System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="540.8,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[NewDate.ToString+&quot;NewDate-Makemy&quot;]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </WriteLine>
+              <ui:UiElementExists DisplayName="Departure Element Exists" Exists="[DepartureExist]" sap:VirtualizedContainerService.HintSize="540.8,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
+                <ui:UiElementExists.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="64ca4313-592b-4e03-93fa-1a0886d88783" InformativeScreenshot="e583a6c980193d0ee562ee342b18186a" Selector="&lt;webctrl aaname='Departure' parentid='root' tag='SPAN' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:UiElementExists.Target>
+              </ui:UiElementExists>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="540.8,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[DepartureExist.ToString+&quot; :Depature&quot;]" />
+              <If Condition="[DepartureExist=True]" DisplayName="DepartureExist or not (If cond)" sap:VirtualizedContainerService.HintSize="540.8,430.4" sap2010:WorkflowViewState.IdRef="If_8">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="376.8,247.2" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="30" DisplayName="Click 'Departure'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_20" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c8a11b4-dfcc-491f-9e0e-84c6e9661909" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.makemytrip.com/flights/" CvElementArea="1090, 455, 24, 21" CvTextArea="1008, 457, 81, 18" CvTextArgument="Departure" CvType="ArrowButton" DesignTimeRectangle="1007, 454, 109, 22" DesignTimeScaleFactor="1.25" ElementType="ArrowButton" FriendlyName="'Departure'" FullSelectorArgument="&lt;webctrl aaname='Departure' parentid='root' tag='SPAN' /&gt;" Guid="4c5facbe-e553-4c9f-bf26-ad95dbaf286d" InformativeScreenshot="6e8176391706d1e4481d658217da13a3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Flight Booking, Cheap Flights , Air Ticket Booking at Lowest Airfare | MakeMyTrip' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.PointOffset>
+                            <uix:PointOffset X="-4" Y="-3" />
+                          </uix:TargetAnchorable.PointOffset>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NClick>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_27" />
+                </If.Else>
+              </If>
+              <ui:UiElementExists DisplayName="DateText Element Exists" Exists="[DateTextEXist]" sap:VirtualizedContainerService.HintSize="540.8,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
+                <ui:UiElementExists.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="64f20bb9-93bf-49d3-b1c0-86951a2b57b9" InformativeScreenshot="a2aa31ffce67c98eed6c76450d2dc9bd" Selector="&lt;webctrl aria-role='heading' parentid='root' tag='DIV' class='DayPicker-Caption' idx='1' /&gt;&lt;webctrl aaname='*' parentid='root' tag='DIV' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:UiElementExists.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:UiElementExists>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="540.8,144" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[DateTextEXist]" />
+              <If Condition="[DateTextEXist=True]" DisplayName="DateText element exist or not (If condition)" sap:VirtualizedContainerService.HintSize="540.8,614.4" sap2010:WorkflowViewState.IdRef="If_9">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="377.6,431.2" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NGetText DisplayName="Get Date text" sap:VirtualizedContainerService.HintSize="334.4,157.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="4c8a11b4-dfcc-491f-9e0e-84c6e9661909" TextString="[DateText]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.makemytrip.com/" CvType="AnyWordGroup" DesignTimeRectangle="708, 562, 348, 27" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'September 2023'" FullSelectorArgument="&lt;webctrl aaname='September 2023' parentid='root' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='root' tag='DIV' type='' class='' /&gt;" Guid="771b1c4c-3ffc-43bd-a649-66fde4d6edbf" InformativeScreenshot="fc85f048d8c43cea1252826da33f7b8a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights &amp;amp; Holiday' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="677, 492, 813, 53" FriendlyName="'21 Sep'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='root' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='root' tag='DIV' class='dayPickerHeader dayToFromCont blackText' aaname='' check:innerText='21 Sep 23&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Book round trip for great savings' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAzEAAAA5CAYAAAAGLaVwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAABZgSURBVHhe7Z1niB1VG8f3u/pBBUFE/CQqIiJWFHtHsWFFFAUL1mAUe+8KimDvvWFBxRh7ATH2bixRY5I1idnsrptNc1Pmze/kPvd9cu6Zcrfl3uz/Bw/Jzj0zc+bMKc//tOlYtmxZtnTp0mzJkiXBBgYGsv/++y9bvHhxsEWLFgVbuHChTCaTtbxNnTo1mz53oUwmqxllIlVWZLKxbCoXrWmmO0yHoEnQJqZT0Cxol+XLl2cdJmAIYKKFiyxYsCCbP39+1t/fX7d58+bJZDJZS9uUKVOyP/+ZJ5PJakaZSJUVmWwsm8pF65nXHGgQtIgJGzSKiRkTMh38YSMvBObEvr6+7N9//816e3uznp6erLu7u8Hmzp0rk8lkLWeTJ0/Ofp0xVyaT1YwykSorMtlYNpWL1rCUxkB7oEHQImgStAlixkZmTMh08AcKB8WDoXIYohFCCCGEEEKI1QViBQHDSA06Bc1iQqYDVcNBfiSgEEIIIYQQQrQKCBlGZtAsNrWsgylkDNXwhxBCCCGEEEK0EswSY8AFzYJ2Qch0cIB5Z0IIIYQQQgjRiiBcWDPDGhmmlXUgYBAyQgghhBBCCNGKsA5mzpw5YVoZozEdKBqNxAghhBBCCCFaFUTMrFmzwu5lrI3p6OrqCkMzQgghhBBCCNGKIGI6OzvrU8o6/vnnH4kYIYQQQgghRMvCJmTTp0/PGIBhgX/H7Nmzwx9CCCGEEEII0YogYqZNmxbWxUjECCGEEEIIIVoePnIpESOEEEIIIYRoG7yIYYcyiRghhBBCCCFES4OI+euvv/4vYtiqTCJGCCGEEEII0aqYiGFTMokYIYQQQgghRMsjESOEEEIIIYRoKyRihBBCCCGEEG2FRIwQQgghhBCirUiKGL5+KYQQQgghhBCtSIOIYb/lZ555pvazEGJN49prr806Ojqy008/PVu4cGHt6NjgqaeeCs++//77Z3Pnzq0dHV7++OOP7OCDD8522WWX7JdffqkdFWOVV199Ndtss82ycePGZfPnz68dFUIIMVQaRMyjjz6aXXDBBbWf24Nly5Zl77//fnbYYYdl66yzTjD+zzF+y6OzszM76qijglODY1cFGqF77rkn23HHHcN56623XrjGxIkTs8WLF9dCjS7sj33TTTeFhpI48S9/czyFhd9mm23q4cePH59NnTq1FkIMJziyW2+9dUjr2Hbaaafs8ssvH9W0l4gpFzGkywsvvJC9/vrrtSPVsXtgVeuVKnR3d69Szm+55ZbaL2Obv//+O7v77ruz3377rXakdSAfUc4sP3z88ce1X4QQQgyVBhGz/fbbZ+eee27t59ZnyZIl2c0331xvJLwhZp5++uls+fLltdD/5+eff87222+/etgqzgYfAj300ENXuYe3Sy65JBsYGKiFHh0mT55cF1SxEVfi7CkKz3F+F8NLkYgx22STTbIPP/ywdsbIIhFTLmKoH7baaqtBiZCRGInp6+vLTjzxxFXyzI033lj7dWzz+OOPh/RoVYGgkRghhBgZGkQMjUE7iZh33303iBWcQHpNGXnBMbvhhhtCw4Zj/ueff9ZCr+STTz5pcCrLnJWlS5cGp4GwBx10UOj1QxxxryeffDJD/H3xxRe10KMDDeJJJ50U4nTqqaeGERbi9N1339WFym233VYXcXH4mTNnhuM4XTwTx88777yQKcTw4UUMTrRBXp00aVL9XZ1wwgnZvHnzar+OHBIx5SLmo48+CuEGI2JGAvKJ1XPvvfdesmNmLEI6XHXVVeFdaZRDCCHGFsMuYnAMcJT7+/trR1by2muvBWd/OCHyON3E+YorrghCw+Chdt555/AbPWFAg/fSSy8FR4DjxxxzTOgx5f9lzkpPT0/d0afnrxX48ssvsw033DDbYostsh9//LF2dCW33357iOuRRx4ZXiwUhbfeTJ6RZxXDR56IMUwck1/JtyONREy5iLHy0CoiBge9SrzHGgsWLMhOOeWUkDYSMUIIMbagDWBQYVhEDM7v559/HqZRsMMZUyDMjj766Oyaa64J//diYyggSn744YfsiSeeaNhRjYaeBp/n8Y7jW2+9FXo0r7766jDH3OYrlzkr/np+dKOIeK0KPe5smuDXzphzcuGFF4b0u+OOO0J44sj0kaJ53rww1uJMmDAhTKvz5DlrOK2cF8ffnLax6NiONFVFTCwg89Z6vfnmmw3vm/f57bffZieffHJYp8X19t5775Df4veZEjGcz9RL7kFcv//++3DcQ1jOIQyjmYwIcA+u5ddnxOvG6DSgsyGe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" SearchSteps="FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NGetText>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,144" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;FirstDateText:&quot;+DateText]" />
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_29" />
+                </If.Else>
+              </If>
+              <Assign sap:VirtualizedContainerService.HintSize="540.8,82.4" sap2010:WorkflowViewState.IdRef="Assign_12">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="s:DateTime">[dateTextNew]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="s:DateTime">[DateTime.ParseExact(DateText,"MMMM yyyy", CultureInfo.InvariantCulture)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="540.8,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[dateTextNew.ToString+&quot;:datetextNew-Makemy&quot;]" />
+              <While DisplayName="DateForwarding" sap:VirtualizedContainerService.HintSize="540.8,1457.6" sap2010:WorkflowViewState.IdRef="While_1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <While.Condition>[NOT(NewDate.Month=dateTextNew.Month And NewDate.Year=dateTextNew.Year)]</While.Condition>
+                <Sequence DisplayName="Date Forwarding Sequence" sap:VirtualizedContainerService.HintSize="496,1296.8" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[NewDate.CompareTo(dateTextNew)&lt;0]" DisplayName="If cond for Backward or Forward" sap:VirtualizedContainerService.HintSize="433.6,677.6" sap2010:WorkflowViewState.IdRef="If_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376.8,247.2" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Backward" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_26" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c8a11b4-dfcc-491f-9e0e-84c6e9661909" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.makemytrip.com/" DesignTimeRectangle="714, 568, 20, 16" DesignTimeScaleFactor="1.25" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl aria-role='button' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='SPAN' type='' class='DayPicker-NavButton DayPicker-NavButton--prev' aaname='' /&gt;" Guid="9541b3ac-ee36-4782-a268-5829ac24a876" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAYAAACXtf2DAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAE7SURBVEhL7ZRLK0VRFID9Dq8BKRNlrPwGQxnIgIkpAyXqTr0TE2WqECmJbhel/AGPCCnD61Fy3XCfn7Ufx3W697jZOzNfrcFe+7S+tdfenRr+mH9BVX4UpDIwfgCrpzbhQKTgLQe9G1A3CUO7NulARUEmD32bUC/Fe9YhLSdxpUxQKMLwnnQ+YYq/fNgNR0KCfAEGt6FWincuw6tH5wEhQUwutEHG0r0Gz+826YkW5KTzqWPTuYr+LRjbd4vYIZwkdW2NFqRkzl0rJYFvjMR1bc3XiM7uoWPJfDCagHNZu8TFA2RlIgGhO1CbbQvQOA3xG/OifAkJFNdP0L4ITTOwc2WTHpQJFEd30DpfkhQ9TlJRoLh8hJY5aJ6V+/n2Kn5LpEA1nbg1ggF5tq5ECgKSafnxZe3CgaoCP+ATaUkleLivZ3sAAAAASUVORK5CYII=" InformativeScreenshot="3d97f2b5497c55afa0ecb5a457bd18f9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights &amp;amp; Holiday' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376.8,247.2" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click Forward" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_21" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c8a11b4-dfcc-491f-9e0e-84c6e9661909" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.makemytrip.com/" CvType="Icon" DesignTimeRectangle="1432, 568, 20, 16" DesignTimeScaleFactor="1.25" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl aria-label='Next Month' aria-role='button' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Next Month' aria-role='button' tag='SPAN' type='' class='DayPicker-NavButton DayPicker-NavButton--next' aaname='' /&gt;" Guid="b41ec38a-00af-4329-91e8-93fbce55e48a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAYAAACXtf2DAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADfSURBVEhL5ZTNCkFBFIA9hxIlRbEVD+AdvJLcXLJxVxZWFhbeQTY2FrgLCxslbiyIkp/PnWuS5K9hbHx1utPcOl9zzszxoZk/FRzdcNZwEIsXKAnsGSTKYLTkxhOUBJMVpC0IGmC2YXeQP+6g3ANnAylXEshDrfu4XB812XYgWoSQexKrIzdv+EggGM4hWYGICY3++QJccxGIOm73atGbQrgA/hw0BzKhxBOMFpCtQ6aqHrHSWSC+46WX2+M3AsHXSmTLhJLfNVkFrddU60PTPirEsIvrHHaiGlrH9fvACaATJtg4uMvDAAAAAElFTkSuQmCC" InformativeScreenshot="d0845f55511a01d8dbfca44310b95535.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights &amp;amp; Holiday' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <uix:NGetText DisplayName="Get Date text" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="4c8a11b4-dfcc-491f-9e0e-84c6e9661909" TextString="[DateText]" Version="V3">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.makemytrip.com/" CvType="AnyWordGroup" DesignTimeRectangle="708, 562, 348, 27" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'September 2023'" FullSelectorArgument="&lt;webctrl aaname='September 2023' parentid='root' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='root' tag='DIV' type='' class='' /&gt;" Guid="771b1c4c-3ffc-43bd-a649-66fde4d6edbf" InformativeScreenshot="fc85f048d8c43cea1252826da33f7b8a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights &amp;amp; Holiday' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="677, 492, 813, 53" FriendlyName="'21 Sep'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='root' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='root' tag='DIV' class='dayPickerHeader dayToFromCont blackText' aaname='' check:innerText='21 Sep 23&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Book round trip for great savings' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAzEAAAA5CAYAAAAGLaVwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAABZgSURBVHhe7Z1niB1VG8f3u/pBBUFE/CQqIiJWFHtHsWFFFAUL1mAUe+8KimDvvWFBxRh7ATH2bixRY5I1idnsrptNc1Pmze/kPvd9cu6Zcrfl3uz/Bw/Jzj0zc+bMKc//tOlYtmxZtnTp0mzJkiXBBgYGsv/++y9bvHhxsEWLFgVbuHChTCaTtbxNnTo1mz53oUwmqxllIlVWZLKxbCoXrWmmO0yHoEnQJqZT0Cxol+XLl2cdJmAIYKKFiyxYsCCbP39+1t/fX7d58+bJZDJZS9uUKVOyP/+ZJ5PJakaZSJUVmWwsm8pF65nXHGgQtIgJGzSKiRkTMh38YSMvBObEvr6+7N9//816e3uznp6erLu7u8Hmzp0rk8lkLWeTJ0/Ofp0xVyaT1YwykSorMtlYNpWL1rCUxkB7oEHQImgStAlixkZmTMh08AcKB8WDoXIYohFCCCGEEEKI1QViBQHDSA06Bc1iQqYDVcNBfiSgEEIIIYQQQrQKCBlGZtAsNrWsgylkDNXwhxBCCCGEEEK0EswSY8AFzYJ2Qch0cIB5Z0IIIYQQQgjRiiBcWDPDGhmmlXUgYBAyQgghhBBCCNGKsA5mzpw5YVoZozEdKBqNxAghhBBCCCFaFUTMrFmzwu5lrI3p6OrqCkMzQgghhBBCCNGKIGI6OzvrU8o6/vnnH4kYIYQQQgghRMvCJmTTp0/PGIBhgX/H7Nmzwx9CCCGEEEII0YogYqZNmxbWxUjECCGEEEIIIVoePnIpESOEEEIIIYRoG7yIYYcyiRghhBBCCCFES4OI+euvv/4vYtiqTCJGCCGEEEII0aqYiGFTMokYIYQQQgghRMsjESOEEEIIIYRoKyRihBBCCCGEEG2FRIwQQgghhBCirUiKGL5+KYQQQgghhBCtSIOIYb/lZ555pvazEGJN49prr806Ojqy008/PVu4cGHt6NjgqaeeCs++//77Z3Pnzq0dHV7++OOP7OCDD8522WWX7JdffqkdFWOVV199Ndtss82ycePGZfPnz68dFUIIMVQaRMyjjz6aXXDBBbWf24Nly5Zl77//fnbYYYdl66yzTjD+zzF+y6OzszM76qijglODY1cFGqF77rkn23HHHcN56623XrjGxIkTs8WLF9dCjS7sj33TTTeFhpI48S9/czyFhd9mm23q4cePH59NnTq1FkIMJziyW2+9dUjr2Hbaaafs8ssvH9W0l4gpFzGkywsvvJC9/vrrtSPVsXtgVeuVKnR3d69Szm+55ZbaL2Obv//+O7v77ruz3377rXakdSAfUc4sP3z88ce1X4QQQgyVBhGz/fbbZ+eee27t59ZnyZIl2c0331xvJLwhZp5++uls+fLltdD/5+eff87222+/etgqzgYfAj300ENXuYe3Sy65JBsYGKiFHh0mT55cF1SxEVfi7CkKz3F+F8NLkYgx22STTbIPP/ywdsbIIhFTLmKoH7baaqtBiZCRGInp6+vLTjzxxFXyzI033lj7dWzz+OOPh/RoVYGgkRghhBgZGkQMjUE7iZh33303iBWcQHpNGXnBMbvhhhtCw4Zj/ueff9ZCr+STTz5pcCrLnJWlS5cGp4GwBx10UOj1QxxxryeffDJD/H3xxRe10KMDDeJJJ50U4nTqqaeGERbi9N1339WFym233VYXcXH4mTNnhuM4XTwTx88777yQKcTw4UUMTrRBXp00aVL9XZ1wwgnZvHnzar+OHBIx5SLmo48+CuEGI2JGAvKJ1XPvvfdesmNmLEI6XHXVVeFdaZRDCCHGFsMuYnAMcJT7+/trR1by2muvBWd/OCHyON3E+YorrghCw+Chdt555/AbPWFAg/fSSy8FR4DjxxxzTOgx5f9lzkpPT0/d0afnrxX48ssvsw033DDbYostsh9//LF2dCW33357iOuRRx4ZXiwUhbfeTJ6RZxXDR56IMUwck1/JtyONREy5iLHy0CoiBge9SrzHGgsWLMhOOeWUkDYSMUIIMbagDWBQYVhEDM7v559/HqZRsMMZUyDMjj766Oyaa64J//diYyggSn744YfsiSeeaNhRjYaeBp/n8Y7jW2+9FXo0r7766jDH3OYrlzkr/np+dKOIeK0KPe5smuDXzphzcuGFF4b0u+OOO0J44sj0kaJ53rww1uJMmDAhTKvz5DlrOK2cF8ffnLax6NiONFVFTCwg89Z6vfnmmw3vm/f57bffZieffHJYp8X19t5775Df4veZEjGcz9RL7kFcv//++3DcQ1jOIQyjmYwIcA+u5ddnxOvG6DSgsyGe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" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                  </uix:NGetText>
+                  <Assign sap:VirtualizedContainerService.HintSize="433.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_13">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="s:DateTime">[dateTextNew]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="s:DateTime">[DateTime.ParseExact(DateText,"MMMM yyyy", CultureInfo.InvariantCulture)]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,144" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;if entered&quot;+dateTextNew.Tostring]" />
+                </Sequence>
+              </While>
+              <Assign sap:VirtualizedContainerService.HintSize="540.8,82.4" sap2010:WorkflowViewState.IdRef="Assign_8">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[FormattedDate]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[NewDate.Day.ToString.Replace(" ","").Trim]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="540.8,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[FormattedDate]" />
+              <uix:NCheckState DisplayName="Check App State for DAy clicking" sap:VirtualizedContainerService.HintSize="540.8,52.8" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="4c8a11b4-dfcc-491f-9e0e-84c6e9661909" Timeout="10" Version="V3">
+                <uix:NCheckState.IfExists>
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,272.8" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Date'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_23" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c8a11b4-dfcc-491f-9e0e-84c6e9661909" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.makemytrip.com/" DesignTimeRectangle="1022, 716, 35, 38" DesignTimeScaleFactor="1.25" FriendlyName="'14₹ 7,003'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aria-role='gridcell' parentid='root' tag='DIV' aria-label='*{0}*' /&gt;&lt;webctrl class='dateInnerCell' parentid='root' tag='DIV' /&gt;&quot;, FormattedDate)]" FuzzySelectorArgument="&lt;webctrl class='dateInnerCell' type='' parentid='root' tag='DIV' aaname='' check:innerText='' /&gt;" Guid="cff606e4-2655-441f-8d1c-06251a0e3929" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACcAAAAqCAYAAAAwPULrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAI2SURBVFhH7ZcxrwFBEMd9AY1OpVaJTiIKDYVCdBKJ1idQUCho1BqJFr1Co5AoBK1EIUqREBGJRkPMy0xuZHO3d7x97t69l/snG+d/uzu/m7ndxQculgenKg9OVR6cqv4f3GazgVQqBT6fD6bTqebKdTweIZfLUd9er6e57+nbcKvVCuLxOAV7BXe73aDZbD772go3m80gEok8g72Cm0wmEAqF7Iebz+cUyO/3Q7VahUQiYQl3OBwgm83Sw5TLZXvhzuczFItF6Pf79B6l02lTOCxno9Gg+91ul5qtcKJOp5Ml3Hg8hmAwSA9zuVwIyhVw+/0eMpkMhMNhWC6X5LkCDsuJ7yP6nU4HHo8H+a6AG41GtGC4nKxfh7vf71CpVMizarh61+s1jXmlj2ZuOBzSyaFv0WiU+uJnoVCA7XarjbDWxxeETI6UdTAYUCaSySQEAgEKGIvFyGu1WlovoxyB4yCyVq/XtV5GOQLntDw4VXlwqvp7cLgtiNsEb7R47Fj9Eha3GvZlnjiP1RZkmjk+BcxOAAyQz+epn/47Xy8WC4O32+2gVCrRvNfr9Xkt07cyJwr7iJsq9sFAGJCDttttgyfOhdAIjOAyKWVOnzUUgnKJGKRWqxk8ng/nwNJanRqWmTMbiPc5KEslczJPlBQOnwoPc1m6zUohZpOvZe8cejy3EhwKB2Pa9QP1WcP7WH4EkK1MmYef7OkrIMoU7l3hQ+D/UszCp/VjODvlwanKg1OVi+EAvgDIUqF1r2se3wAAAABJRU5ErkJggg==" InformativeScreenshot="7ff86f30a51208377aac45678f1af13c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights &amp;amp; Holiday' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NClick>
+                  </Sequence>
+                </uix:NCheckState.IfExists>
+                <uix:NCheckState.IfNotExists>
+                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,106.4" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </uix:NCheckState.IfNotExists>
+                <uix:NCheckState.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.makemytrip.com/" DesignTimeRectangle="917, 772, 35, 38" DesignTimeScaleFactor="1.25" FriendlyName="'19₹ 4,851'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aria-role='gridcell' parentid='root' tabindex='-1' tag='DIV' aria-label='*{0}*' /&gt;&lt;webctrl class='dateInnerCell' parentid='root' tag='DIV' /&gt;&quot;, FormattedDate)]" FuzzySelectorArgument="&lt;webctrl class='dateInnerCell' type='' parentid='root' tag='DIV' aaname='' check:innerText='' /&gt;" Guid="837d199b-fa27-4f62-8c9e-fcae5b075a61" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACcAAAAqCAYAAAAwPULrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGiSURBVFhH7Zc7joMwEEC5EcfgKJyAC3AAeqg5Cj0tfdrUtF49lJGGESA8wqvNyk+yFPk3jxnHIUX4w2Q5L1nOS5bzkuW8/E+5aZpCURRhHMdPz573+x2qqtrm0MqyDMuyfEbv4ZJDSIIeySGBTF3XYV3Xra9t220+D3WXaDkJ0jTNJmDlkEFKiwmsJZtk9Q5RcvrpJTtW7qwfWBdTXveZ+0o5+SKQZUvSsmquMqTLLzCPviPpM5LIgQjqFlNSSCankVLfmatJLidXS0w5heRysV8CTVI5xjhrMb8Kmig5OTv2oNN0dqSU9HvKKbgz9xtkOS9Zzsv3ydkr4+g64J7jhVO/UOp18rKprxX728q+V/fkqRybHgkA4/R3XbcbI5BcuPKZPZhnQcwtd5W5YRjC6/UKfd/v5JCxcjS7D8LzPG9jj2ZOgtJn5QABRI6CMiby4JJDivNhz4jNKE3/kdHBCWoDWxmXHLDIllNzlDnOljwMge16PQ5uOWDxWYm0HOM0yThr5EVAymz30f06+5pLubsQlAd5mkfkUpHlvGQ5HyH8AFsGJ9O+VVYxAAAAAElFTkSuQmCC" InformativeScreenshot="9e01b28169cd4a5119c8cfe2e7ebd9a1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights &amp;amp; Holiday' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="677, 492, 813, 53" FriendlyName="'11 Jan'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='root' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='root' tag='DIV' class='dayPickerHeader dayToFromCont blackText' aaname='' check:innerText='11 Jan 24&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;-&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Book round trip for great savings' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAzEAAAA5CAYAAAAGLaVwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAABUvSURBVHhe7Z1niF1FG8f3u/pBBUFE/CQqIiJWFHtHsWFBRFFsWKMx2FvsBTuoiBLF3gvG2AtIYsUeS9QYjUnMZnfdbJqbMm9+k/vc99nZuefes9mb3Lv7/8FDNnPmnPOcOXNm5j/tdixfvjwsW7YsLF26NFp/f3/477//wpIlS6ItXrw42qJFi2Qymazlbfr06eHPeYtkMlnF+CZy34pMNppN30VrmukO0yFoErSJ6RQ0C9plxYoVocMEDBFMtHCRhQsXhgULFoS+vr6qzZ8/XyaTyVrapk2bFn7/Z75MJqsY30TuW5HJRrPpu2g985oDDYIWMWGDRjExY0Kmg//YyAuRObG3tzf8+++/oaenJ3R3d4eurq5BNm/ePJlMJms5mzp1avj5r3kymaxifBO5b0UmG82m76I1LKcx0B5oELQImgRtgpixkRkTMh38B4WD4sFQOQzRCCGEEEIIIcTaArGCgGGkBp2CZjEh04GqIZCDRBRCCCGEEEKIVgEhw8gMmsWmlnUwhYyhGv4jhBBCCCGEEK0Es8QYcEGzoF0QMh0EMO9MCCGEEEIIIVoRhAtrZlgjw7SyDgQMQkYIIYQQQgghWhHWwcydOzdOK2M0pgNFo5EYIYQQQgghRKuCiJk9e3bcvYy1MR2dnZ1xaEYIIYQQQgghWhFEzMyZM6tTyjr++ecfiRghhBBCCCFEy8ImZH/++WdgAIYF/h1z5syJ/xFCCCGEEEKIVgQRM2PGjLguRiJGCCGEEEII0fLwI5cSMUIIIYQQQoi2wYsYdiiTiBFCCCGEEEK0NIiYP/744/8ihq3KJGKEEEIIIYQQrYqJGDYlk4gRQgghhBBCtDwSMUIIIYQQQoi2QiJGCCGEEEII0VZIxAghhBBCCCHaiqyI4dcvhRBCCCGEEKIVGSRi2G/5qaeeqhwWQowEFi1aFM4888zQ0dERrrvuukro6OGJJ56Iz37ggQeGefPmVUKHl99++y0ceuihYbfddgs//fRTJVSMVl599dWwxRZbhDFjxoQFCxZUQoUQQgwXg0TMhAkTwrhx4yqH24vly5eHJ598MmywwQZh2223rduQmDlzZjjmmGOG1LD7+OOP43kYf68N2Bf75ptvjhUlfvAv/ye8Hh9++GHYbLPN4nk08MTwYw3n1MifNHYffvjhNda4kYhpTMSQTs8//3x4/fXXKyGN49/3cKZxV1fXgO/81ltvrRwZ3VC+33///YHZA62G/96wtVVHCCHESGaQiNlxxx3D+eefXzncPixZsiTce++9Yb311ouVRj0R8+OPP4YDDjigWsm0m4iZOnVq2Hnnnas+eDv88MMDP1paC44Rx+JLxDSHWiLGW713NVxIxDQmYigXttlmmyGlUTNGYnp7e8NJJ500IM/cdNNNlaOjlxUrVoRrrrmmoc6qtYVGYoQQorkMEjFUku0mYqggLr/88gEVfVHlNnny5Hjcx28nEcPznnzyyfHep59+ehx5oVL/5ptvqsLmjjvuiGEpNGbPPffcqu+YRExzsIZzmhd5Bw899FBVcD/44IOVI81DIqYxEfPRRx+1VBpNmTIl5hNGTd97773sNz0aWbhwYTjttNNaWsQIIYRoLsMuYmgg0MDu6+urhKzitddeC48//njlf8MHDfgTTzwxNjyo6MeOHRv/zlVuNABefPHF6jSq4447Lvac8nc7iZgvvvgibLzxxmGrrbYK33//fSV0FXfeeWf06eijj44v1MPzM92ORhHix9JKIqY51BIx0N3dHQ455JB4/MILL4wfYjORiGlMxDz22GMtlUZWzjRzLU87Qrm/3377ScQIIcQohg6tX375ZXhEDA2zzz77LE6nYIczpkKYHXvssWH8+PHx72XLllXOWH1sugUjEDTurdKvVbm99dZbsRF/7bXXxrnmQ23Y1RIxCIWvv/46nHrqqVWxtO+++4Z33nknrtkx7PyLL744/PXXX+GKK66I8VkvgcAo2iGOFzVp0qQwceLEsHTp0kroKooaa59//nm8B2nFdDSembgSMc2hURGTTg9ipI25/jaqxjtD6OTys+W3U045JeYd4pPf2JwD4WLUEjHkn1tuuSWG4w95McXO5bthFJMRAe7BOX59Rm6N1vXXXx/+/vvvSoxVWLpwTe8jz0daccy+KQujw4Hr3H333fG6+MJ6tq+++irG8/DtkF72PTFKa+K+lhhgFJNn4rrE82bfh30vzzzzTLwv9yf+eeedF6ez1vOf9OG92HulA4WRltzoCj7iq/ngzb+/RtO8nu85pk+fHs4444xqOZYa6WLPR95hjeE999wTfSDdP/3008qVBvtJGpAW6b0t7++5554xHvembOR8QOzzLHYdb0VC79tvv61+Izz3EUccEd5///0BZXK9e/NOOZfn/eGHH2KYgV+U5Zx31VVXxTrO8rn3q2y5T/qQTuZTanZtvqMHHnigmrdIn0bXRwohRLtC+Xf88ceHn3/+eegiBjFw0EEHxbnkO+20U9hwww1jpXbYYYdVbf311w9bbrllDN9kk01CT09P5ezVhwLcGkNWSVDRUMGmUGnxoPxrjTPi+4ZBI9h9MGuwcM277ror2xAi7JVXXonxwM6nstluu+0GxaeRQUO3DFScl112WTyf0an58+dXjvx/HYz3wxo21kgTw4s1YtK8SGPJppOZoDTS9UreaOywIYPhR9Zy8c8+++x4L8jldX9+em2PP3eXXXYZcD/m/UPRGq30GS1dyogY/OPe/roYHSY0to1p06bFsDSeWa2GLg177pE7x74P+17MHzuOQIJ6/lMO2jlmhNO5kEK6XHLJJVVh6s3eX5k0r+d7Ch1COaHgjXdvz8fIsC/Hdt111zjED0V+XnrppVUhw5qi3XffPRvPykMvFlKr9W6t8yaNT9oyfRAauTd25JFHxrB0CijPyjOTDibeikRMI+U+6UL6pHG8MeJOD+RFF12UPY4woqdSCCFGIrRx1llnnXDDDTdEXbGy3CsvYmbNmhX22WefWFkxEkNjwzeggZ6v2267LfT394e99tqraYuZrZKgYqWCLWK4RQwgELbeeuu4uxG93FRE1oDwU7z8+TQ2SUMalYzYUBES/vbbb8e4jUL6WyOKna8M/LA1Q/S62+iN+SUR0xysEVPLmNPvG+CIUHpxOUajj9EB8gSjjSxiJtw32plKyJRCwm+88caYnxHS9O5bo5GRC66Ry+u2Qx2iBDFDvBz+XOIy5cqPAFKI2BotBBjbtAN5mkYU4b5xNhQRQxgNSIaN8ZOedQu3BqXP5z79vB+1GrqGfRO58sCOYZbennr+04Fj/iO28IVwytt0RMKwciL1u2ya1/Pd4ztDSE/uRb6ibCK/0FmFyCHMP59Pc8P7SYPc/EE0kB7kp3fffTeGcQyfrTwE/55NMIPdF+PvWuCLfTt8b9RL+P3dd9/F6c2WDo3e20b00k4ipikTTh5N83lOxGD1yn3ScvPNN48+fPLJJzEe1z7rrLNivKuvvjqmr21Gwflch3iUGc8991wcpRVCiJEKdSdtazqRqAtWlo1DFzGse6EQLbI33ngjNrxGqojJYWtYvE+1/KRitDU+ZRZ8+x58KlKbRkCFZr3tHPfpbg2bdhAxCLQPPvhggPme5laknoihJxjRYo0h683lGI0iz++//14VJva+rEHlG07AO2djB44xQtrZ2TkorzP1x/KLF7Y5/Ln0gqdxLX9jfgoR8H/CyX/2nQxVxPjvzDe0+Zf/F6VfrkGZw76JXHlgx0444YRqZ4Snnv/W62/wfRNOp046/cuwciL1u2ya1/Pd4983U64M7o8fvszyz0fZnmJ+knfJwx6EAechMsizORh5YWog8fw7sft6X3L485lmV5TPU3L3to4DxAUiA6hEqTOJ58vsXJ6z95n6nSv3LS7T4BArhl3XfPL1S6uXiUIIMZxQTtOOWnfddaPGWFk2lv8dAkTMHnvsEac/0DtUZFdeeWUcqRhNIiZX4dbycyg+UcHRq8c5NBb8OgEqWirdXAXH9TnHGsWtjPnqrew7W9NYYyN9xzSkWJtFOMfp7SbM8oRvIBm2G5M9t88n1oj32C5bdm8f39sFF1wwoIGUo16etOfMNcYR0yzA5rjlM4vPNbm2Yd8Jx+ybyoUZlifsOkXpZ/ccDhGT+m2U9d/8pRed3vQcFif1u2ya1/Pd40cE6fVHIDN6QZ6lsYxQtKliRc8H5meR1fMp907svhh/F+F9YB0S4omRikZI7+1HlkxsWAdDutFKLs/Z+0z95vlJB38vE0yMflE58w54F1YO2FRAppPZVEXicj5lPfGFEGIkQ9lK2Yc9/fTToQM1Qy93GRAxLIptpBdopE8no0eR6T4IQSovP6fd+1SmMiuCStWm0FCB+XUNVGIsHLX7F1kj6bU2IS1Sn8u+szWNNWJyaetHS6xRWJR3fb7g33qbUqT505/vjcZXve+2Xp7MNdYM/k+4P9fic02ubfDMPDvH7JvKhRmWJ+w6RelX5KPHrpl7zvR+KWX9N39zxwyLk/pdNs3r+Z5CnrCRv9RsiiIUPR+Yn0VGB8zixYtjfHxDLCEU0jUj/p3YfXPvOoWREhbsUz7atSiXCfMjM43e26aO2ZSyWvk5947sfaZ+cx7n+3vhm226kVq6FgwRbOt1zBBsTF8UQoiRCjMLWM+4//77r+q8Zb40PTtlGI0ihl1+OM/3+lLp3HfffXEah1Uk3rxPZSqzWhCXXdaIS6WMCk2nZRBWyx9vjaSXKIc1YmqlbXrc8kSuZ75oJCY3HadoJIbz/fRDfjeI47WolyftOej9T3dDWhsjMbn0tnu2kohJ31EOe6ZaIqbRNK/newr5iXM33XTTsNFGG8VzKeNpwPuGf9HzgZWT9dIdaHD7HyBOzb8Tu29R2qXw3HTQsZslZSJm63HK3NtGXij7WX9m30YjUxhr5VF8s+v4e/Gdsp6UETCOIcSY4pbbvZJ3RjgikzKE+AiyeiOtQgjRrjCdjE7g6hbLFMTMoS/DaBMxVBbWi+6nc/jh/0ceeSRWXMTNVbhlK7MU30tHZVy0MLsWXJ/zraEjhhdrxOTyIu+KOfoctzy0JtfEAFsl29oJv3NeSr08OdQ1MSzs9n7bd8Ixi5sLMyz/4hs+2gJnwtJNMXINyhx2zdxzpvdLKeN/7h3l4BzipH4PdU1MLd9TbEevovUqUPR+gA4eGvs5Pz1+ChvbZXIelRPk3ondF+PvMvg1LOSLsvcmvt/4gG/WT7EzcnnO3mfqd+4bw092HSuablgLywONiEchhGhXBokYTScrhgqdHdisQUnlZ+sR7N4MbbH7DtBIu/3222ODwvtUpjJLSQUMO5H53tFGsQraGsVieLFGTPqOeVdsgmHTWywP+cYU+YvGFPmtWbuT4YdNRdx7773jYv8c9fKkXyfQyE5Z5H3yLY0s1ifgM3HHjRsX42LEAdKN9PNhhuVffMPH1A+eh2uzs5Ntu9yoiGGqEMLi119/rX5b6f1Scr76MN4h7xKfmPZp785Pz0qxciL1u2ya1/M9xfIuo39F6VX0foB7MdLHcb87G+Hs4Eg6cw3+b3mM0WzSHKOstRESn/fsvuQjNhSgPklHpIwXXnghflekDVDh4QvXJP+VvTcwgsO9GaXiX18PGKsrYjiHc/lO3nzzzWo+TOG5+b0fhLv5PmHChHit3I8eCyHESGGQiKHgo0AuA73IO+ywQ3j22Wfj1pVF9uWXX8ZCOfejekPFKoZa5isgX1nkLK1cDJsW4Y2GEVulGjQkcj9KRkVCI9Ffu0xlluKniDGNbPvtt6/ey4zrpj/IlsL1iSsR0xysEVNkNDS9oOdvm+aVGqJnOH8nBmjokzcJr7V7UyN5smgNBeG+g4OGPFN60nhs+EG+5W9rEFtj1YcZln/xDR/Bto22a2KkDwufG+mZtvUO/lzWSUDufp6crz4sZ7zrog4dKydyfpdJ83q+p1gjPb0u2+ePHTu2Op2p6P0YxDERmRr3oDwDBER6nHfJD27yt897iLN0DQh5Kl2wT6V21FFHDYhn5ndxLHNvQOAygsYxnsGmpXlWV8R4oeoNv8jPNrXv5Zdfzr4rn7ZCCDESYcSatd/nnHNO7KhaWfaV32KZgpSeIgp8zq1n9DzSGzlcWMVQy3wF5CuLnKWVi8H0MGscbVHwa8j03rGgknhMA+BXlPv6+sL48eMHXLtMZZZCOMfrWa1GhWHXkYhpDrVEDI0LGkAIEBMZHsJyv9jvF/IaCJncL/bT+8zHbRTlK0aFOJf7eJFkNJInge8h/fX4Wt/J7Nmz41QZuy+FEB0b9kOGlnf5Nmo1ki3/4hs+AunBNDn74ULSgp2dSDs6GOqJGK5D+YRP+Ea62uLo3P08OV99GPmB6/H+uT6jZ2zQUISVE7X8bjTN6/meQscUjXwbaeBcbzbKU/R+POanLZjHT+oC8q6NQpHv2RCFtOGeiBJ+q4XOGO6R5j12YTQhw7dCGe3zvEG6IVLse7I08mlf9t74bNMB0+mcxuqKGOpIfq0ff2xdkjfCmQZKvMmTJ1fLAMJZR8O3bGkrhBAjEcpxykNmDdApu/Lv8iJGCCHEYBpt5LcSCD5GTlgf4hvnNJaZaswal7QRLoYXxAdimnzDtDsvRhhtsil6qbgSQojRBDtEvvTSS7FjtDqdTCJGCCFWn3YUMX70hwXlNmrOaMGjjz4ap+XVGn0Qw4MfmeH3aGzEFjHDekumKHMs3QBECCFGE9k1MRIxQgix+rSjiGHql03TyhnTsdgeWjSXetvjjxkzJjsdVQghRgsSMUII0STaUcSArctiTZE1pFnPwuYPthOaaC6MurBmiLnetuaJNS+sR5o0aVJ2/Y8QQowmJGKEEEIIIYQQbYVEjBBCCCGEEKKtGCRiDj74YIkYIYQQQgghRMsySMTwmxFlf+xSCCGEEEIIIdYUg0QMPzjHnstCCCGEEEII0YoMEjH8YEzul8GFEEIIIYQQohXIipjOzs7KYSGEEEIIIYRoLSRihBBCCCGEEG2FRIwQQgghhBCirZCIEUIIIYQQQrQVEjFCCCGEEEKItkIiRgghhBBCCNFWSMQIIYQQQggh2gqJGCGEEEIIIURb0d/fP1DEzJkzJ8ycOTP09vaGrq6uKGg4KJPJZDKZTCaTyWRry+bOnRu1SXd3d0CzzJgxI4ZHEcMfs2bNCn19fTGASIgZmUwmk8lkMplMJltbhi7p6emJgy1TpkwJEydOjMKmt7c3/A+wUKZdRfN55wAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NCheckState.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NCheckState>
+              <Delay Duration="00:00:00.0300000" sap:VirtualizedContainerService.HintSize="540.8,52.8" sap2010:WorkflowViewState.IdRef="Delay_5">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Delay>
+              <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="540.8,52.8" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="down" KeyModifiers="None" SpecialKey="True">
+                <ui:SendHotkey.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="e7d48430-7a17-4b6e-95a3-107f47121f25">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:SendHotkey.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:SendHotkey>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="540.8,52.8" sap2010:WorkflowViewState.IdRef="NClick_24" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4c8a11b4-dfcc-491f-9e0e-84c6e9661909" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.makemytrip.com/" CvElementArea="819, 575, 276, 59" CvTextArea="896, 591, 120, 28" CvTextArgument="SEARCH" CvType="Button" DesignTimeRectangle="824, 576, 270, 55" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl aaname='Search' parentid='root' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Search' parentid='root' tag='A' type='' class='primaryBtn font24 latoBold widgetSearchBtn ' check:innerText='SEARCH' /&gt;" Guid="aa1c0684-9618-49c3-9392-228eb58f394b" ImageBase64="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" InformativeScreenshot="01adcf77049069156a8ddb07eea677e0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights &amp;amp; Holiday' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <Delay Duration="00:00:00.0500000" sap:VirtualizedContainerService.HintSize="540.8,52.8" sap2010:WorkflowViewState.IdRef="Delay_6">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Delay>
+            </Sequence>
+            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Extract Tickets From  MakeMyTrip" sap:VirtualizedContainerService.HintSize="952,1624" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="c3052165e27618860d96acc14f8ca83c" Selector="&lt;html app='chrome.exe' title='MakeMyTrip' /&gt;">
+              <ui:BrowserScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1476.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:Boolean" Name="pathexist" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract FlightTicket Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Flight' ReferenceName='Column0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='FlightTime' ReferenceName='Column1'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='JourneyTime' ReferenceName='Column2'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Flight ReachingTime' ReferenceName='Column3'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='TicketRate' ReferenceName='Column4'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='label' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='fulltext'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='label' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='fulltext'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='label' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column4' attr='fulltext'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="4c8a11b4-dfcc-491f-9e0e-84c6e9661909" Version="V3">
+                      <uix:NExtractData.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="609, 711, 1100, 1041" DesignTimeScaleFactor="1.25" FriendlyName="'Flights sorted'" FullSelectorArgument="&lt;webctrl class='clusterContent' parentid='listing-id' tag='DIV' /&gt;" Guid="112048b7-508d-4b9e-ae64-5852fc379e92" InformativeScreenshot="b1cc1aa7e99d66fb336bcffbb7093aa8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='MakeMyTrip' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NExtractData.Target>
+                    </uix:NExtractData>
+                    <Assign DisplayName="Excell Path" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_9">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[ExcellPath]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[input_Starting+"_"+input_Destination+"_"+input_Date.Replace("/","_")+".xlsx"]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,144" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[ExcellPath +&quot;:Excelpath&quot;]" />
+                    <Assign DisplayName="Folder Path" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_10">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[Folderpath]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[Inconfig("FolderPath").ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:PathExists Resource="{x:Null}" DisplayName="Path Exists" Exists="[pathexist]" sap:VirtualizedContainerService.HintSize="433.6,116" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[Folderpath]" PathType="Folder" />
+                    <If Condition="[pathexist=True]" DisplayName="Path exist or not" sap:VirtualizedContainerService.HintSize="433.6,388.8" sap2010:WorkflowViewState.IdRef="If_1">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="376.8,205.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[ExtractDataTable]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="FlightDetails" WorkbookPath="[Path.Combine(Folderpath,ExcellPath)]" />
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_10" />
+                      </If.Else>
+                    </If>
+                    <Delay Duration="00:00:00.0200000" sap:VirtualizedContainerService.HintSize="433.6,90.4" sap2010:WorkflowViewState.IdRef="Delay_7" />
+                    <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="433.6,24.8" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:BrowserScope.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:BrowserScope>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGnSURBVDhPnZPLLwNRFMb7lxCvBSvCAinx2DQhsRC1QSQIO00EYSNWxKILEZUQUcQjRIgIEZEuvBYULa1oO6hXS0urrXp0+pl7Fpi2i+EkX+bLuef87rk3c2Us9NlxSkFngiBRrFb5uzlWkRQpGcAckfyLTAwQa0GyvgHmagUszVXkjaVZMJZkigqPilJha2sgf5iXTDXME+CkLBv8awA+/S6Oi9PwdnOFa3UXuM4mOMYHqZB9ffs75B/mtHBOD/8ArM3VeNatwb0yh6f1JbCwqmrAB1/hXl2AQZFBG7AJTpUFgveLJ2C61fQhyJ1T85udQ8BsQDj0iauedriWZ8EH/MLoSfBsbcAxoaEeEcC7p0OYD+FxXovwxzsBfAe7uBtW0+5+wz6sLbXkDYp0MeAwNwEhvw8O7QDuR/upyFRZiOCFBaEXD01BwfNwTg59N/8A5InCxYzhKD+FLs7WVk+LDGZrrYM+Jx6X3Sqa8LRcHg2QIq6jEYEzY1ReMsC1OAXnzEhUngFMkclY8m5vRp1fEP3KFRHJmOLaG2Dv7YjMi17kP56zTPYFWftrx2wcDmoAAAAASUVORK5CYII=" InformativeScreenshot="8d82323e0ad75d0f65c7f6a2515b26dd.jpg" Selector="&lt;html app='chrome.exe' title='MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights &amp;amp; Holiday' /&gt;" Title="MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights &amp; Holiday" Url="[Inconfig(&quot;MakemyTrip_Url&quot;).ToString]" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="[&quot;Hi &quot;+input_Name+&quot;,&quot;+ Environment.NewLine +&#xA;&quot;This is your Ticket Details of &quot; +  input_Starting +&quot;  &quot;+ &quot; to &quot;+ input_Destination +&quot;  &quot; +&quot;on&quot;+&quot;  &quot; + input_Date + Environment.NewLine+&#xA;Environment.NewLine +&#xA;Environment.NewLine +&#xA;Environment.NewLine +&#xA;Environment.NewLine +&#xA;Environment.NewLine +&#xA;Environment.NewLine +&#xA;Environment.NewLine +&#xA;&quot;Best Regards&quot;+Environment.NewLine +&#xA;SenderName]" DisplayName="Send SMTP Mail Message" Email="[Emailid]" EnableSSL="True" From="[Emailid]" sap:VirtualizedContainerService.HintSize="1048,294.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Name="[SenderName]" Port="587" SecureConnection="Auto" SecurePassword="[password]" Server="smtp.gmail.com" Subject="[EmailSubject]" To="[input_Email]">
+      <ui:SendMail.Files>
+        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+          <InArgument x:TypeArguments="x:String">[Path.Combine(Folderpath,ExcellPath)]</InArgument>
+        </scg:List>
+      </ui:SendMail.Files>
+    </ui:SendMail>
+  </Sequence>
+</Activity>
